@@ -139,7 +139,6 @@ h1{
 .subtitle{
   margin: 0 0 16px;
   color: rgba(229,231,235,0.82);
-  max-width: 70ch;
 }
 .hero-meta{
   display:grid;
