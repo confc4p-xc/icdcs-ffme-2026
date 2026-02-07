@@ -52,16 +52,16 @@
 
     <section id="about" class="section">
       <div class="section-head">
-        <h2>About</h2>
+        <h2>About This Workshop</h2>
         <p class="section-desc">Workshop scope and motivation.</p>
       </div>
 
       <div class="card prose">
         <p>
-          This workshop explores the challenges of training, adapting, and deploying foundation models in distributed edge environments under federated learning constraints. As large language and multimodal models increasingly move from centralized clouds toward edge and near-edge infrastructures, assumptions of abundant resources, stable connectivity, and centralized control no longer hold. While federated learning provides a privacy-preserving framework for collaborative model adaptation, existing approaches are not designed to support foundation models operating across heterogeneous, resource-constrained, and intermittently connected edge systems.
+          This workshop explores the challenges of training, adapting, and deploying foundation models in distributed edge environments under federated learning constraints. As large language and multimodal models increasingly move from centralized clouds toward edge and near-edge infrastructures, assumptions of abundant resources, stable connectivity, and centralized control no longer hold. While federated learning provides a privacy-preserving framework for collaborative model adaptation, existing approaches have not been designed to support foundation models operating across heterogeneous, resource-constrained, and intermittently connected edge systems.
         </p>
         <p>
-          This workshop focuses on system-level and algorithmic challenges at the intersection of federated learning, foundation models, and edge computing, including scalability and communication efficiency, heterogeneity and non-IID data, personalization and continual adaptation, security and privacy risks, and operational issues in large-scale deployment. Emphasizing cross-layer perspectives, the workshop seeks contributions that examine fundamental trade-offs between model capability, system efficiency, robustness, and privacy. Its timing is particularly relevant as regulatory pressure, latency-sensitive applications, and on-device intelligence demands are accelerating the transition of foundation models toward federated edge deployments, while theory, principled frameworks, and empirical understanding remain limited.
+          This workshop focuses on theoretical and algorithmic design challenges at the intersection of federated learning, on-device foundation models, and edge computing, including but not limited to scalability, communication efficiency, heterogeneity and non-IIDness, personalization, security and privacy risks, and operational issues in large-scale deployment. Emphasizing cross-layer perspectives, the workshop seeks contributions that examine fundamental trade-offs between model capability, system efficiency, robustness, and privacy. Its timing is particularly relevant as regulatory pressure, latency-sensitive applications, and on-device intelligence demands are accelerating the transition of foundation models toward federated edge deployments, while theory, principled frameworks, and empirical understanding remain largely limited.
         </p>
       </div>
     </section>
@@ -74,16 +74,15 @@
 
       <div class="card prose">
         <p>
-          Foundation models (FMs), including large language and multimodal models, are increasingly being deployed beyond centralized cloud infrastructures toward edge environments to meet privacy, latency, and bandwidth requirements. At the same time, federated learning has emerged as a key paradigm for collaborative model training without raw data sharing. The convergence of these trends gives rise to Federated Foundation Models at the Edge, where foundation-scale models are collaboratively trained, adapted, and deployed across heterogeneous and resource-constrained edge systems.
+          Foundation models (FMs), including large language and multimodal models, are increasingly being deployed beyond centralized cloud infrastructures toward edge environments to meet privacy, latency, and bandwidth requirements. At the same time, federated learning has emerged as a key paradigm for collaborative model training without raw data sharing. The convergence of these trends gives rise to federated foundation models at the edge, where foundation LLMs are collectively trained, adapted, and deployed across heterogeneous and resource-constrained edge systems.
         </p>
         <p>
-          Despite recent progress, existing federated learning frameworks are not designed to support foundation models under edge constraints. The scale of foundation models, combined with limited computation, communication, and energy resources at the edge, introduces new challenges in data heterogeneity, scalability, efficiency, robustness, personalization, and security. Addressing these challenges requires cross-layer solutions spanning learning algorithms, distributed systems, networking, and trustworthy deployment. This workshop aims to provide a focused forum for discussing system-level and algorithmic advances, as well as practical experiences, in federated foundation models at the network edge. We encourage submissions that examine end-to-end feasibility, cross-layer trade-offs, and real-world deployment considerations.
+          Despite recent progress, existing federated learning frameworks are not designed to support foundation models under edge constraints. The scale of foundation models, combined with limited computation, communication, and energy resources at the edge, introduces new challenges in heterogeneity, scalability, efficiency, robustness, personalization, and security. Addressing these challenges requires cross-layer solutions spanning learning algorithms, distributed systems, networking, and trustworthy deployment. This workshop aims to provide a focused forum for discussing system-level and algorithmic advances, as well as practical experiences, in federated foundation models at the network edge. We encourage submissions that study novel algorithmic design, fundamental trade-offs, and real-world deployments.
         </p>
 
         <h3>Topics (non-exhaustive)</h3>
         <ul>
           <li>Federated/split learning for foundation models</li>
-          <li>Real-world applications of on-device foundation models</li>
           <li>Communication-efficient federated/split learning</li>
           <li>Communication protocols for federated/split learning</li>
           <li>Optimization of on-device foundation model deployment</li>
@@ -91,7 +90,8 @@
           <li>Privacy and security in on-device foundation models</li>
           <li>Multi-agent and collaborative learning at the edge</li>
           <li>Cloud-edge small-large language model collaboration</li>
-          <li>Economics for federated/split learning</li>
+          <li>Economics in federated/split learning</li>
+          <li>Applications of on-device foundation models</li>
           <li>Real-world testbeds, demos, and empirical evaluations for on-device foundation models</li>
         </ul>
 
@@ -166,6 +166,7 @@
   </main>
 </body>
 </html>
+
 
 
 
