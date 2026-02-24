@@ -8,6 +8,104 @@
 
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* --- Light Mode & Layout Overrides --- */
+    :root {
+      --bg-color: #f4f7f6;
+      --text-color: #2b2b2b;
+      --card-bg: #ffffff;
+      --primary-color: #0056b3;
+      --nav-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-muted: #666666;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    a { color: var(--primary-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Topbar Navigation */
+    .topbar { background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color); padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .brand { display: flex; align-items: center; color: var(--text-color); font-weight: bold; }
+    .brand-logo { height: 40px; margin-right: 15px; }
+    .brand-title { font-size: 1.2rem; }
+    .brand-subtitle { font-size: 0.9rem; color: var(--text-muted); font-weight: normal; }
+    .nav a { margin-left: 20px; color: var(--text-color); font-weight: 500; font-size: 0.95rem; }
+    .nav a:hover { color: var(--primary-color); }
+    
+    /* Hero Section with Seoul Image Background */
+    .hero {
+      /* Uses a high-quality placeholder image of Seoul. Replace the URL with your own image if preferred. */
+      background-image: url('https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .hero-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.92); /* Semi-transparent white card to make text readable over the image */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      backdrop-filter: blur(4px);
+    }
+    
+    .hero-badge { display: inline-block; background: var(--primary-color); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;}
+    .hero h1 { margin-top: 0; color: var(--text-color); font-size: 2.2rem; line-height: 1.2;}
+    .subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px;}
+    
+    .hero-meta { display: flex; justify-content: center; border-top: 1px solid var(--border-color); padding-top: 15px;}
+    .meta-k { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600;}
+    .meta-v { font-size: 1.1rem; font-weight: 500;}
+    
+    /* Main Sections & Cards */
+    .section { padding: 50px 0; }
+    .section-head { margin-bottom: 25px; }
+    .section-head h2 { color: var(--text-color); font-size: 1.8rem; margin: 0 0 5px 0;}
+    .section-desc { color: var(--text-muted); margin: 0; }
+    
+    .card { background: var(--card-bg); padding: 35px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); margin-bottom: 20px; border: 1px solid var(--border-color); }
+    .prose p { margin-top: 0; margin-bottom: 1.5rem; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose h3 { margin-top: 1.5rem; color: var(--text-color); }
+    .prose ul { padding-left: 20px; }
+    .prose li { margin-bottom: 8px; }
+    
+    /* Organizing Committee Grid */
+    .grid-people { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .person { padding: 20px; background: var(--bg-color); border-radius: 8px; text-align: center; border: 1px solid var(--border-color); transition: transform 0.2s; }
+    .person:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .person-name { font-weight: bold; font-size: 1.1rem; color: var(--text-color); }
+    .person-affil { font-size: 0.9rem; color: var(--text-muted); margin: 5px 0 10px 0; }
+    .person-link { font-size: 0.9rem; }
+    
+    /* Dates List */
+    .dates { list-style: none; padding: 0; margin: 0;}
+    .dates li { display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding: 15px 0; }
+    .dates li:last-child { border-bottom: none; }
+    .date-k { font-weight: 600; color: var(--text-color); }
+    .date-v { color: var(--primary-color); font-weight: 500;}
+    .small { font-size: 0.85rem; }
+    .muted { color: var(--text-muted); margin-top: 15px; }
+    
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary-color); color: white; padding: 8px; z-index: 100;}
+    .skip-link:focus { top: 0; }
+  </style>
 </head>
 
 <body>
@@ -16,7 +114,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top" aria-label="Home">
-        <img class="brand-logo" src="assets/logo.svg" alt="Workshop logo" />
+        <img class="brand-logo" src="assets/logo.svg" alt="Workshop logo" onerror="this.style.display='none'" />
         <div class="brand-text">
           <div class="brand-title">FFM@Edge Workshop</div>
           <div class="brand-subtitle">ICDCS 2026</div>
@@ -33,7 +131,7 @@
     </div>
   </header>
 
-  <main id="main" class="container">
+  <main id="main">
     <section class="hero" id="top">
       <div class="hero-card">
         <div class="hero-badge">Workshop @ ICDCS 2026</div>
@@ -44,148 +142,148 @@
 
         <div class="hero-meta">
           <div class="meta-item">
-            <div class="meta-k">Workshop Date and Locations</div>
-            <div class="meta-v">July 22, 2026, Seoul, South Korea</div>
+            <div class="meta-k">Workshop Date and Location</div>
+            <div class="meta-v">July 22, 2026 • Seoul, South Korea</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="section-head">
-        <h2>About This Workshop</h2>
-      </div>
+    <div class="container">
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2>About This Workshop</h2>
+        </div>
 
-      <div class="card prose">
-        <p>
-          This workshop explores the challenges of training, adapting, and deploying foundation models (or large language models) in distributed (federated) edge environments. As large language and multimodal models increasingly move from centralized clouds toward edge and near-edge infrastructures, assumptions of abundant resources, stable connectivity, and centralized control no longer hold. While federated learning provides a privacy-preserving framework for collaborative model adaptation, existing approaches have not been designed to support foundation models operating across heterogeneous, resource-constrained, and intermittently connected edge systems.
-        </p>
-        <p>
-          This workshop focuses on theoretical and algorithmic design challenges at the intersection of federated learning, on-device foundation models, and edge computing, including but not limited to scalability, communication efficiency, heterogeneity and non-IIDness, personalization, security and privacy risks, and operational issues in large-scale deployment. Emphasizing cross-layer perspectives, the workshop seeks contributions that examine fundamental trade-offs between model capability, system efficiency, robustness, and privacy. Its timing is particularly relevant as regulatory pressure, latency-sensitive applications, and on-device intelligence demands are accelerating the transition of foundation models toward federated edge deployments, while theory, principled frameworks, and empirical understanding remain largely limited.
-        </p>
-      </div>
-    </section>
+        <div class="card prose">
+          <p>
+            This workshop explores the challenges of training, adapting, and deploying foundation models (or large language models) in distributed (federated) edge environments. As large language and multimodal models increasingly move from centralized clouds toward edge and near-edge infrastructures, assumptions of abundant resources, stable connectivity, and centralized control no longer hold. While federated learning provides a privacy-preserving framework for collaborative model adaptation, existing approaches have not been designed to support foundation models operating across heterogeneous, resource-constrained, and intermittently connected edge systems.
+          </p>
+          <p>
+            This workshop focuses on theoretical and algorithmic design challenges at the intersection of federated learning, on-device foundation models, and edge computing, including but not limited to scalability, communication efficiency, heterogeneity and non-IIDness, personalization, security and privacy risks, and operational issues in large-scale deployment. Emphasizing cross-layer perspectives, the workshop seeks contributions that examine fundamental trade-offs between model capability, system efficiency, robustness, and privacy. Its timing is particularly relevant as regulatory pressure, latency-sensitive applications, and on-device intelligence demands are accelerating the transition of foundation models toward federated edge deployments, while theory, principled frameworks, and empirical understanding remain largely limited.
+          </p>
+        </div>
+      </section>
 
-    <section id="cfp" class="section">
-      <div class="section-head">
-        <h2>Call for Papers</h2>
-      </div>
+      <section id="cfp" class="section">
+        <div class="section-head">
+          <h2>Call for Papers</h2>
+        </div>
 
-      <div class="card prose">
-        <p>
-          To meet privacy, latency, and bandwidth requirements, foundation models are increasingly being deployed toward edge environments. However, existing federated learning frameworks are not designed to support foundation models under edge constraints. The scale of foundation models, combined with limited computation, communication, and energy resources at the edge, introduces tremendous new challenges. This workshop aims to provide a focused forum on federated foundation models at the network edge. We encourage submissions on novel algorithmic design, fundamental trade-offs, and real-world deployments of federated learning and on-device foundation models, including but not limited to
-        </p>
+        <div class="card prose">
+          <p>
+            To meet privacy, latency, and bandwidth requirements, foundation models are increasingly being deployed toward edge environments. However, existing federated learning frameworks are not designed to support foundation models under edge constraints. The scale of foundation models, combined with limited computation, communication, and energy resources at the edge, introduces tremendous new challenges. This workshop aims to provide a focused forum on federated foundation models at the network edge. We encourage submissions on novel algorithmic design, fundamental trade-offs, and real-world deployments of federated learning and on-device foundation models, including but not limited to:
+          </p>
 
-        <h3>Topics (non-exhaustive)</h3>
-        <ul>
-          <li>Federated/split learning for foundation models</li>
-          <li>Communication-efficient federated/split learning</li>
-          <li>Communication protocols for federated/split learning</li>
-          <li>Optimization of on-device foundation model deployment</li>
-          <li>Federated and on-device RAG systems</li>
-          <li>Privacy and security in on-device foundation models</li>
-          <li>Multi-agent and collaborative learning at the edge</li>
-          <li>Cloud-edge small-large language model collaboration</li>
-          <li>Economics in federated/split learning</li>
-          <li>Applications of on-device foundation models</li>
-          <li>Real-world testbeds, demos, and empirical evaluations for on-device foundation models</li>
-        </ul>
+          <h3>Topics (non-exhaustive)</h3>
+          <ul>
+            <li>Federated/split learning for foundation models</li>
+            <li>Communication-efficient federated/split learning</li>
+            <li>Communication protocols for federated/split learning</li>
+            <li>Optimization of on-device foundation model deployment</li>
+            <li>Federated and on-device RAG systems</li>
+            <li>Privacy and security in on-device foundation models</li>
+            <li>Multi-agent and collaborative learning at the edge</li>
+            <li>Cloud-edge small-large language model collaboration</li>
+            <li>Economics in federated/split learning</li>
+            <li>Applications of on-device foundation models</li>
+            <li>Real-world testbeds, demos, and empirical evaluations for on-device foundation models</li>
+          </ul>
 
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section id="submission" class="section">
-      <div class="section-head">
-        <h2>Submission Guidelines</h2>
-        <p class="section-desc">Instructions for authors.</p>
-      </div>
+      <section id="submission" class="section">
+        <div class="section-head">
+          <h2>Submission Guidelines</h2>
+          <p class="section-desc">Instructions for authors.</p>
+        </div>
 
-      <div class="card prose">
-        <p>
-          Submissions to the Workshop must be original and unpublished and must not be submitted concurrently for publication elsewhere. All submissions should follow the IEEE 8.5" x 11" two-column format using 10pt fonts and the IEEE Conference template (downloadable by selecting “Conferences” in the IEEE-Template Selector <a href="https://template-selector.ieee.org/">https://template-selector.ieee.org/</a>).
-        </p>
-        <p>
-          Each submission can have up to 6 pages (including figures, tables, appendices, and references). Submissions exceeding this page limit or with smaller fonts will be desk-rejected without review. The review process is single-blind review.
-        </p>
-        <p>
-          For each accepted paper, at least one author is required to register and attend the workshop in-person to present their poster/paper on-site. All accepted and presented papers will be included in the IEEE ICDCSW companion conference proceedings and IEEE digital library.
-        </p>
-        <p>
-          Note that the authors should adhere to ethical and professional standards of IEEE. Please refer to IEEE Code of Ethics and IEEE Policy of AI-Generated Text.
-        </p>
-      </div>
-    </section>
+        <div class="card prose">
+          <p>
+            Submissions to the Workshop must be original and unpublished and must not be submitted concurrently for publication elsewhere. All submissions should follow the IEEE 8.5" x 11" two-column format using 10pt fonts and the IEEE Conference template (downloadable by selecting “Conferences” in the IEEE-Template Selector <a href="https://template-selector.ieee.org/">https://template-selector.ieee.org/</a>).
+          </p>
+          <p>
+            Each submission can have up to 6 pages (including figures, tables, appendices, and references). Submissions exceeding this page limit or with smaller fonts will be desk-rejected without review. The review process is single-blind review.
+          </p>
+          <p>
+            For each accepted paper, at least one author is required to register and attend the workshop in-person to present their poster/paper on-site. All accepted and presented papers will be included in the IEEE ICDCSW companion conference proceedings and IEEE digital library.
+          </p>
+          <p>
+            Note that the authors should adhere to ethical and professional standards of IEEE. Please refer to IEEE Code of Ethics and IEEE Policy of AI-Generated Text.
+          </p>
+        </div>
+      </section>
 
-    <section id="dates" class="section">
-      <div class="card">
-        <ul class="dates">
-          <li>
-            <span class="date-k">Paper Submission Deadline</span>
-            <span class="date-v">March 14, 2026</span>
-          </li>
-          <li>
-            <span class="date-k">Notification of Acceptance</span>
-            <span class="date-v">April 1, 2026</span>
-          </li>
-          <li>
-            <span class="date-k">Camera-Ready</span>
-            <span class="date-v">April 15, 2026</span>
-          </li>
-          <li>
-            <span class="date-k">Workshop Date</span>
-            <span class="date-v">July 22, 2026</span>
-          </li>
-        </ul>
-        <div class="muted small">*All deadlines are Anywhere on Earth (AoE).</div>
-      </div>
-    </section>
-    
-    
-    <section id="org" class="section">
-      <div class="section-head">
-        <h2>Organizing Committee</h2>
-      </div>
+      <section id="dates" class="section">
+        <div class="section-head">
+          <h2>Important Dates</h2>
+        </div>
+        <div class="card">
+          <ul class="dates">
+            <li>
+              <span class="date-k">Paper Submission Deadline</span>
+              <span class="date-v">March 14, 2026</span>
+            </li>
+            <li>
+              <span class="date-k">Notification of Acceptance</span>
+              <span class="date-v">April 1, 2026</span>
+            </li>
+            <li>
+              <span class="date-k">Camera-Ready</span>
+              <span class="date-v">April 15, 2026</span>
+            </li>
+            <li>
+              <span class="date-k">Workshop Date</span>
+              <span class="date-v">July 22, 2026</span>
+            </li>
+          </ul>
+          <div class="muted small">*All deadlines are Anywhere on Earth (AoE).</div>
+        </div>
+      </section>
+      
+      <section id="org" class="section">
+        <div class="section-head">
+          <h2>Organizing Committee</h2>
+        </div>
 
-      <div class="card">
-        <div class="grid-people">
+        <div class="card">
+          <div class="grid-people">
 
-          <div class="person">
-            <div class="person-name">Xianhao Chen</div>
-            <div class="person-affil">The University of Hong Kong, Hong Kong SAR</div>
-            <a class="person-link" href="mailto:xcheneee@hku.hk">xcheneee@hku.hk</a>
-          </div>
+            <div class="person">
+              <div class="person-name">Xianhao Chen</div>
+              <div class="person-affil">The University of Hong Kong, Hong Kong SAR</div>
+              <a class="person-link" href="mailto:xcheneee@hku.hk">xcheneee@hku.hk</a>
+            </div>
 
-          <div class="person">
-            <div class="person-name">Bing Luo</div>
-            <div class="person-affil">Duke Kunshan University, China</div>
-            <a class="person-link" href="mailto:bing.luo@dukekunshan.edu.cn">bing.luo@dukekunshan.edu.cn</a>
-          </div>
-          
-          <div class="person">
-            <div class="person-name">Christopher G. Brinton</div>
-            <div class="person-affil">Purdue University, USA</div>
-            <a class="person-link" href="mailto:cgb@purdue.edu">cgb@purdue.edu</a>
-          </div>
+            <div class="person">
+              <div class="person-name">Bing Luo</div>
+              <div class="person-affil">Duke Kunshan University, China</div>
+              <a class="person-link" href="mailto:bing.luo@dukekunshan.edu.cn">bing.luo@dukekunshan.edu.cn</a>
+            </div>
+            
+            <div class="person">
+              <div class="person-name">Christopher G. Brinton</div>
+              <div class="person-affil">Purdue University, USA</div>
+              <a class="person-link" href="mailto:cgb@purdue.edu">cgb@purdue.edu</a>
+            </div>
 
-          <div class="person">
-            <div class="person-name">Ahmed M. A. Sayed</div>
-            <div class="person-affil">Queen Mary University of London, UK</div>
-            <a class="person-link" href="mailto:ahmed.sayed@qmul.ac.uk">ahmed.sayed@qmul.ac.uk</a>
-          </div>
+            <div class="person">
+              <div class="person-name">Ahmed M. A. Sayed</div>
+              <div class="person-affil">Queen Mary University of London, UK</div>
+              <a class="person-link" href="mailto:ahmed.sayed@qmul.ac.uk">ahmed.sayed@qmul.ac.uk</a>
+            </div>
 
-          <div class="person">
-            <div class="person-name">Shiqiang Wang</div>
-            <div class="person-affil">University of Exeter, UK</div>
-            <a class="person-link" href="mailto:S.Wang9@exeter.ac.uk">S.Wang9@exeter.ac.uk</a>
+            <div class="person">
+              <div class="person-name">Shiqiang Wang</div>
+              <div class="person-affil">University of Exeter, UK</div>
+              <a class="person-link" href="mailto:S.Wang9@exeter.ac.uk">S.Wang9@exeter.ac.uk</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+    </div>
   </main>
 </body>
 </html>
-
-
-
-
