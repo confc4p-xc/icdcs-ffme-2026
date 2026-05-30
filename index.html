@@ -8,6 +8,81 @@
 
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* Added styles for Speakers and Schedule sections */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .speaker-card {
+      display: flex;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #fff;
+      padding: 15px;
+      gap: 20px;
+      align-items: flex-start;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .speaker-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .speaker-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .speaker-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0 0 4px 0;
+      color: #222;
+    }
+    .speaker-affil {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 12px;
+    }
+    .speaker-talk {
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    .speaker-talk strong {
+      color: #333;
+    }
+
+    .schedule-wrapper {
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: 0.95em;
+    }
+    .schedule-table th, .schedule-table td {
+      border: 1px solid #e0e0e0;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    .schedule-table th {
+      background: #25282e;
+      color: #ffffff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .schedule-table tr:nth-child(even) td {
+      background: #fafafa;
+    }
+  </style>
 </head>
 
 <body>
@@ -28,6 +103,8 @@
         <a href="#cfp">CFP</a>
         <a href="#dates">Dates</a>
         <a href="#submission">Submission</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
         <a href="#org">Organizers</a>
       </nav>
     </div>
@@ -144,6 +221,69 @@
           </li>
         </ul>
         <div class="muted small">*All deadlines are Anywhere on Earth (AoE).</div>
+      </div>
+    </section>
+
+    <section id="speakers" class="section">
+      <div class="section-head">
+        <h2 style="border-bottom: 2px solid #5a8ab4; padding-bottom: 10px;">Invited Speakers</h2>
+      </div>
+      <p>We are looking forward to hosting an exciting set of invited speakers from diverse research backgrounds!</p>
+      
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <img src="Yan_Gao.jpeg" alt="Dr. Yan Gao" class="speaker-img" />
+          <div class="speaker-info">
+            <h3 class="speaker-name">Dr. Yan Gao</h3>
+            <div class="speaker-affil">[Affiliation to be added]</div>
+            <div class="speaker-talk"><strong>Talk:</strong> [Title to be added]</div>
+          </div>
+        </div>
+
+        <div class="speaker-card">
+          <img src="Mingyue_Ji.jpeg" alt="Dr. Mingyue Ji" class="speaker-img" />
+          <div class="speaker-info">
+            <h3 class="speaker-name">Dr. Mingyue Ji</h3>
+            <div class="speaker-affil">[Affiliation to be added]</div>
+            <div class="speaker-talk"><strong>Talk:</strong> [Title to be added]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <div class="section-head">
+        <h2 style="border-bottom: 2px solid #5a8ab4; padding-bottom: 10px;">Workshop Schedule</h2>
+      </div>
+      <p>The workshop will be held on <strong>Thursday, June 25, 2026</strong> in Seoul, South Korea.</p>
+
+      <div class="schedule-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th style="width: 15%;">TIME</th>
+              <th style="width: 65%;">NAME</th>
+              <th style="width: 20%;">SPEAKER</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 09:30</td>
+              <td>Invited Talk #1</td>
+              <td>Dr. Yan Gao</td>
+            </tr>
+            <tr>
+              <td>09:30 - 10:00</td>
+              <td>Invited Talk #2</td>
+              <td>Dr. Mingyue Ji</td>
+            </tr>
+            <tr>
+              <td>10:00 - 11:00</td>
+              <td><strong>Paper Presentations</strong></td>
+              <td>--</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
     
